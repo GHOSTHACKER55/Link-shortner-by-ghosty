@@ -1,159 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ghosty Link Shortener</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        overflow: hidden;
-        text-align: center;
-        color: white;
-    }
-
-    .bg-video {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        filter: brightness(0.4);
-    }
-
-    .container {
-        margin-top: 20%;
-        display: none;
-    }
-
-    .start-btn {
-        margin-top: 40%;
-        padding: 18px 40px;
-        font-size: 26px;
-        color: white;
-        background: red;
-        border: none;
-        border-radius: 40px;
-        cursor: pointer;
-        font-weight: bold;
-        box-shadow: 0px 0px 20px red;
-        transition: 0.3s;
-    }
-
-    .start-btn:hover {
-        transform: scale(1.05);
-    }
-
-    input {
-        width: 70%;
-        padding: 12px;
-        border-radius: 10px;
-        border: none;
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-
-    button {
-        padding: 12px 25px;
-        background: #0099ff;
-        border: none;
-        border-radius: 10px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .links {
-        margin-top: 25px;
-    }
-
-    .wa-btn {
-        background: #25D366;
-        padding: 12px 30px;
-        border-radius: 15px;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .tg-btn {
-        background: #0088cc;
-        padding: 12px 30px;
-        border-radius: 15px;
-        color: white;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        display: inline-block;
-        margin: 5px;
-    }
-</style>
+<title>Protected</title>
 </head>
 <body>
-
-<!-- BACKGROUND VIDEO -->
-<video id="bgVid" class="bg-video" preload="auto" muted playsinline loop>
-    <source src="https://raw.githubusercontent.com/GHOSTHACKER55/Mf-gabru-song/main/VID-20251202-WA0226.mp4" type="video/mp4">
-</video>
-
-<!-- START BUTTON -->
-<button class="start-btn" id="startTool">START GHOSTY TOOL</button>
-
-<!-- MAIN TOOL UI -->
-<div class="container" id="toolBox">
-
-    <h2>Ghosty Link Shortener</h2>
-
-    <input id="longURL" type="text" placeholder="Enter long URL">
-    <br>
-    <button onclick="shortenURL()">Shorten</button>
-
-    <p id="result" style="font-size:20px; font-weight: bold;"></p>
-
-    <div class="links">
-        <a class="wa-btn" href="https://chat.whatsapp.com/CPQC5IGJA2m8iaOWOE8CAN?mode=hqrt1">WhatsApp Group</a>
-        <a class="tg-btn" href="https://t.me/CyropesTricks">Telegram Group</a>
-    </div>
-</div>
-
 <script>
-document.getElementById("startTool").onclick = function () {
-    document.getElementById("startTool").style.display = "none";
-    document.getElementById("toolBox").style.display = "block";
-
-    let v = document.getElementById("bgVid");
-    v.muted = false;
-    v.play().catch(() => {
-        console.log("Autoplay blocked but retrying…");
-        setTimeout(() => v.play(), 500);
-    });
-};
-
-function shortenURL() {
-    let url = document.getElementById("longURL").value;
-    if (!url) {
-        document.getElementById("result").innerText = "Enter a valid URL";
-        return;
-    }
-
-    let shortURL = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(url);
-
-    fetch(shortURL)
-        .then(r => r.text())
-        .then(data => {
-            document.getElementById("result").innerHTML = "Short Link: <br><span>" + data + "</span>";
-        });
-}
+(function(){
+    var d = "PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgo8dGl0bGU+R2hvc3R5IExpbmsgU2hvcnRlbmVyPC90aXRsZT4KCjxzdHlsZT4KICAgIGJvZHkgewogICAgICAgIG1hcmdpbjogMDsKICAgICAgICBwYWRkaW5nOiAwOwogICAgICAgIGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsKICAgICAgICBvdmVyZmxvdzogaGlkZGVuOwogICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICBjb2xvcjogd2hpdGU7CiAgICB9CgogICAgLmJnLXZpZGVvIHsKICAgICAgICBwb3NpdGlvbjogZml4ZWQ7CiAgICAgICAgdG9wOiAwOwogICAgICAgIGxlZnQ6IDA7CiAgICAgICAgd2lkdGg6IDEwMCU7CiAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIG9iamVjdC1maXQ6IGNvdmVyOwogICAgICAgIHotaW5kZXg6IC0xOwogICAgICAgIGZpbHRlcjogYnJpZ2h0bmVzcygwLjQpOwogICAgfQoKICAgIC5jb250YWluZXIgewogICAgICAgIG1hcmdpbi10b3A6IDIwJTsKICAgICAgICBkaXNwbGF5OiBub25lOwogICAgfQoKICAgIC5zdGFydC1idG4gewogICAgICAgIG1hcmdpbi10b3A6IDQwJTsKICAgICAgICBwYWRkaW5nOiAxOHB4IDQwcHg7CiAgICAgICAgZm9udC1zaXplOiAyNnB4OwogICAgICAgIGNvbG9yOiB3aGl0ZTsKICAgICAgICBiYWNrZ3JvdW5kOiByZWQ7CiAgICAgICAgYm9yZGVyOiBub25lOwogICAgICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7CiAgICAgICAgY3Vyc29yOiBwb2ludGVyOwogICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkOwogICAgICAgIGJveC1zaGFkb3c6IDBweCAwcHggMjBweCByZWQ7CiAgICAgICAgdHJhbnNpdGlvbjogMC4zczsKICAgIH0KCiAgICAuc3RhcnQtYnRuOmhvdmVyIHsKICAgICAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDUpOwogICAgfQoKICAgIGlucHV0IHsKICAgICAgICB3aWR0aDogNzAlOwogICAgICAgIHBhZGRpbmc6IDEycHg7CiAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDsKICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgbWFyZ2luLWJvdHRvbTogMTBweDsKICAgICAgICBmb250LXNpemU6IDE4cHg7CiAgICB9CgogICAgYnV0dG9uIHsKICAgICAgICBwYWRkaW5nOiAxMnB4IDI1cHg7CiAgICAgICAgYmFja2dyb3VuZDogIzAwOTlmZjsKICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDsKICAgICAgICBjb2xvcjogd2hpdGU7CiAgICAgICAgZm9udC1zaXplOiAxOHB4OwogICAgICAgIGN1cnNvcjogcG9pbnRlcjsKICAgICAgICBtYXJnaW4tdG9wOiAxMHB4OwogICAgfQoKICAgIC5saW5rcyB7CiAgICAgICAgbWFyZ2luLXRvcDogMjVweDsKICAgIH0KCiAgICAud2EtYnRuIHsKICAgICAgICBiYWNrZ3JvdW5kOiAjMjVEMzY2OwogICAgICAgIHBhZGRpbmc6IDEycHggMzBweDsKICAgICAgICBib3JkZXItcmFkaXVzOiAxNXB4OwogICAgICAgIGNvbG9yOiB3aGl0ZTsKICAgICAgICBmb250LXNpemU6IDIwcHg7CiAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICAgICAgICBtYXJnaW46IDVweDsKICAgIH0KCiAgICAudGctYnRuIHsKICAgICAgICBiYWNrZ3JvdW5kOiAjMDA4OGNjOwogICAgICAgIHBhZGRpbmc6IDEycHggMzBweDsKICAgICAgICBib3JkZXItcmFkaXVzOiAxNXB4OwogICAgICAgIGNvbG9yOiB3aGl0ZTsKICAgICAgICBmb250LXNpemU6IDIwcHg7CiAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7CiAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogICAgICAgIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICAgICAgICBtYXJnaW46IDVweDsKICAgIH0KPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KCjwhLS0gQkFDS0dST1VORCBWSURFTyAtLT4KPHZpZGVvIGlkPSJiZ1ZpZCIgY2xhc3M9ImJnLXZpZGVvIiBwcmVsb2FkPSJhdXRvIiBtdXRlZCBwbGF5c2lubGluZSBsb29wPgogICAgPHNvdXJjZSBzcmM9Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9HSE9TVEhBQ0tFUjU1L01mLWdhYnJ1LXNvbmcvbWFpbi9WSUQtMjAyNTEyMDItV0EwMjI2Lm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KPC92aWRlbz4KCjwhLS0gU1RBUlQgQlVUVE9OIC0tPgo8YnV0dG9uIGNsYXNzPSJzdGFydC1idG4iIGlkPSJzdGFydFRvb2wiPlNUQVJUIEdIT1NUWSBUT09MPC9idXR0b24+Cgo8IS0tIE1BSU4gVE9PTCBVSSAtLT4KPGRpdiBjbGFzcz0iY29udGFpbmVyIiBpZD0idG9vbEJveCI+CgogICAgPGgyPkdob3N0eSBMaW5rIFNob3J0ZW5lcjwvaDI+CgogICAgPGlucHV0IGlkPSJsb25nVVJMIiB0eXBlPSJ0ZXh0IiBwbGFjZWhvbGRlcj0iRW50ZXIgbG9uZyBVUkwiPgogICAgPGJyPgogICAgPGJ1dHRvbiBvbmNsaWNrPSJzaG9ydGVuVVJMKCkiPlNob3J0ZW48L2J1dHRvbj4KCiAgICA8cCBpZD0icmVzdWx0IiBzdHlsZT0iZm9udC1zaXplOjIwcHg7IGZvbnQtd2VpZ2h0OiBib2xkOyI+PC9wPgoKICAgIDxkaXYgY2xhc3M9ImxpbmtzIj4KICAgICAgICA8YSBjbGFzcz0id2EtYnRuIiBocmVmPSJodHRwczovL2NoYXQud2hhdHNhcHAuY29tL0hWTTlTcHZtN0hWR0xFUmo4eW85a1MiPldoYXRzQXBwIEdyb3VwPC9hPgogICAgICAgIDxhIGNsYXNzPSJ0Zy1idG4iIGhyZWY9Imh0dHBzOi8vdC5tZS9DeXJvcGVzVHJpY2tzIj5UZWxlZ3JhbSBHcm91cDwvYT4KICAgIDwvZGl2Pgo8L2Rpdj4KCjxzY3JpcHQ+CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJzdGFydFRvb2wiKS5vbmNsaWNrID0gZnVuY3Rpb24gKCkgewogICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInN0YXJ0VG9vbCIpLnN0eWxlLmRpc3BsYXkgPSAibm9uZSI7CiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgidG9vbEJveCIpLnN0eWxlLmRpc3BsYXkgPSAiYmxvY2siOwoKICAgIGxldCB2ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoImJnVmlkIik7CiAgICB2Lm11dGVkID0gZmFsc2U7CiAgICB2LnBsYXkoKS5jYXRjaCgoKSA9PiB7CiAgICAgICAgY29uc29sZS5sb2coIkF1dG9wbGF5IGJsb2NrZWQgYnV0IHJldHJ5aW5n4oCmIik7CiAgICAgICAgc2V0VGltZW91dCgoKSA9PiB2LnBsYXkoKSwgNTAwKTsKICAgIH0pOwp9OwoKZnVuY3Rpb24gc2hvcnRlblVSTCgpIHsKICAgIGxldCB1cmwgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibG9uZ1VSTCIpLnZhbHVlOwogICAgaWYgKCF1cmwpIHsKICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVzdWx0IikuaW5uZXJUZXh0ID0gIkVudGVyIGEgdmFsaWQgVVJMIjsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgbGV0IHNob3J0VVJMID0gImh0dHBzOi8vdGlueXVybC5jb20vYXBpLWNyZWF0ZS5waHA/dXJsPSIgKyBlbmNvZGVVUklDb21wb25lbnQodXJsKTsKCiAgICBmZXRjaChzaG9ydFVSTCkKICAgICAgICAudGhlbihyID0+IHIudGV4dCgpKQogICAgICAgIC50aGVuKGRhdGEgPT4gewogICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgicmVzdWx0IikuaW5uZXJIVE1MID0gIlNob3J0IExpbms6IDxicj48c3Bhbj4iICsgZGF0YSArICI8L3NwYW4+IjsKICAgICAgICB9KTsKfQo8L3NjcmlwdD4KCjwvYm9keT4KPC9odG1sPg==";
+    var h = decodeURIComponent(escape(atob(d)));
+    document.open();
+    document.write(h);
+    document.close();
+})();
 </script>
-
 </body>
 </html>
